@@ -16,17 +16,12 @@ count += 1
 with open(newfile, 'wb') as fi:
     pickle.dump(count, fi)
 
-
-
 camera = PiCamera()
-
 button = Button(2)
 led = LED(17)
-
 pic = 1
 
 sleep(5)
-
 
 while True:
     if button.is_pressed:
