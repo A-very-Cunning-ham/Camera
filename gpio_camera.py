@@ -6,14 +6,14 @@ import pickle
 
 count = 1
 
-newfile = 'cameraCount.pk'
+save = 'cameraCount.pk'
 
-with open(newfile, 'rb') as fi:
+with open(save, 'rb') as fi:
     count = pickle.load(fi)
 
 count += 1
 
-with open(newfile, 'wb') as fi:
+with open(save, 'wb') as fi:
     pickle.dump(count, fi)
 
 camera = PiCamera()
