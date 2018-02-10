@@ -6,7 +6,7 @@ import pickle
 
 count = 1
 
-save = 'cameraCount.pk'
+save = '/home/pi/camera/cameraCount.pk'
 
 with open(save, 'rb') as fi:
     count = pickle.load(fi)
@@ -21,7 +21,11 @@ button = Button(2)
 led = LED(17)
 pic = 1
 
-sleep(5)
+camera.resolution = (3280, 2464)
+camera.awb_mode = 'off'
+camera.awb_gains = ((1.45),(1))
+
+sleep(2)
 
 while True:
     if button.is_pressed:
