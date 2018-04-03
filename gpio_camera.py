@@ -55,7 +55,6 @@ count += 1
 with open(save, 'wb') as fi:
     pickle.dump(count, fi)
 
-camera = PiCamera()
 button = Button(2)
 led = LED(17)
 pic = 1
@@ -70,7 +69,7 @@ while True:
             led.on()
             sleep(0.5)
         while button.is_pressed:
-            numpyCapture()
+            NDVI_Capture()
             led.off()
             sleep(1)
             led.on()
